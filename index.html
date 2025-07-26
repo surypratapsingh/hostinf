@@ -1,0 +1,80 @@
+<!--
+  Simple Static Site Template
+  ===========================
+  This `index.html` can be deployed directly to Netlify or Vercel.
+
+  Deployment Instructions:
+  - Netlify: Create a new site -> drag & drop this file (or folder) in the UI.
+  - Vercel: Install the Vercel CLI (`npm i -g vercel`), then run `vercel` in this directory.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Static Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header, footer {
+      background: #f4f4f4;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #333;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Static Site</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome!</h2>
+      <p>This is a simple static HTML template ready for deployment.</p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Write something about yourself or your project here.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; " + new Date().getFullYear() + " Your Name
+  </footer>
+
+  <script>
+    // Example JavaScript
+    console.log('Static site loaded successfully!');
+  </script>
+</body>
+</html>
