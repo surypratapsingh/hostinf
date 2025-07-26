@@ -1,80 +1,95 @@
 <!--
-  Simple Static Site Template
-  ===========================
-  This `index.html` can be deployed directly to Netlify or Vercel.
-
-  Deployment Instructions:
-  - Netlify: Create a new site -> drag & drop this file (or folder) in the UI.
-  - Vercel: Install the Vercel CLI (`npm i -g vercel`), then run `vercel` in this directory.
+  Personal Portfolio - surypratapsingh
+  Deployable on Netlify or Vercel
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Static Site</title>
+  <title>Surya Pratap Singh | Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header, footer {
-      background: #f4f4f4;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #333;
-    }
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:0; color:#333; }
+    header, footer { background:#222; color:#fff; text-align:center; padding:1rem; }
+    nav a { margin:0 1rem; color:#fff; text-decoration:none; }
+    main { max-width:900px; margin:2rem auto; padding:0 1rem; }
+    section { margin-bottom:3rem; }
+    h1, h2, h3 { margin-bottom:0.5rem; }
+    .skills span { display:inline-block; background:#eee; margin:0.25rem; padding:0.5rem 1rem; border-radius:20px; }
+    .social a { margin:0 0.5rem; color:#0077b5; text-decoration:none; font-weight:bold; }
+    ul { list-style-type: disc; margin-left: 1.5rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>My Static Site</h1>
+    <h1>Surya Pratap Singh</h1>
     <nav>
-      <a href="#">Home</a>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Hackathons</a>
+      <a href="#education">Education</a>
+      <a href="#interests">Interests</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="home">
-      <h2>Welcome!</h2>
-      <p>This is a simple static HTML template ready for deployment.</p>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Surya Pratap Singh</strong> from Bulandshahr, Uttar Pradesh. I’m currently pursuing a <em>Bachelor of Science in Data Science and Application</em> at <a href="https://www.iitm.ac.in/" target="_blank">IIT Madras</a> (2024–2028) and a <em>BCA in Computer Programming</em> at <a href="#" target="_blank">I.P. College, Campus 2</a> (2024–2027). As a dedicated student at IITM, I thrive on data-driven problem solving and innovative coding challenges.</p>
+      <p>With participation in three hackathons, I enjoy building solutions like QR-based payment systems, secure MFA dashboards, and real-time analytics portals. Beyond code, I’m an avid runner, proud finisher of local marathons, and a devoted Doctor Strange fan exploring the multiverse of ideas.</p>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>Write something about yourself or your project here.</p>
+    <section id="skills">
+      <h2>Top Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>Statistical Data Analysis</span>
+        <span>Statistics</span>
+        <span>Photography</span>
+        <span>Algorithms</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Hackathons</h2>
+      <ul>
+        <li><strong>Campus Pay</strong> – QR-based session verification system for seamless fee collection.</li>
+        <li><strong>SecureSign</strong> – Multi-factor authentication portal under admin surveillance.</li>
+        <li><strong>LiveDash</strong> – Interactive dashboard with real-time analytics for event monitoring.</li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Indian Institute of Technology, Madras</strong><br/>BS Data Science and Application, Computer Programming (2024 &ndash; 2028)</li>
+        <li><strong>I.P. College, Campus 2</strong><br/>BCA, Computer Programming, Specific Applications (2024 &ndash; 2027)</li>
+        <li><strong>Delhi Public School, Bulandshahr</strong><br/>Class 10 &amp; 12, CBSE (2018 &ndash; 2023)</li>
+      </ul>
+    </section>
+
+    <section id="interests">
+      <h2>Interests & Hobbies</h2>
+      <p><strong>Fitness:</strong> Marathon running and regular workouts—completed two local marathons.</p>
+      <p><strong>Photography:</strong> Capturing urban landscapes and candid life moments.</p>
+      <p><strong>Reading:</strong> From technical journals to science fiction and classic literature.</p>
+      <p><strong>Marvel Universe:</strong> Enthusiastic fan of Doctor Strange and multiverse theory.</p>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <h2>Contact & Connect</h2>
+      <p>Email: <a href="mailto:surya.pratap3804@gmail.com">surya.pratap3804@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/surya-pratap-singh-874a48314/" target="_blank">/in/surya-pratap-singh-874a48314</a></p>
     </section>
   </main>
 
   <footer>
-    &copy; " + new Date().getFullYear() + " Your Name
+    &copy; <span id="year"></span> Surya Pratap Singh
   </footer>
 
   <script>
-    // Example JavaScript
-    console.log('Static site loaded successfully!');
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
